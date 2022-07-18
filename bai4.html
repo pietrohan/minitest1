@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập số n bất kỳ: <br> <label><input id="num" type="number" style="width: 20%"></label></p>
+<p id="kq"></p>
+<button onclick="tinh()" type="button">kiểm tra</button>
+</body>
+</html>
+<script>
+    function tinh() {
+        let number = document.getElementById('num').value;
+        let i = 1;
+        let nhapSo = '';
+        while (i <= number) {
+            nhapSo += i + ', ';
+            i++;
+        }
+        document.getElementById('kq').innerHTML = "Dãy số từ 1- n là: " + nhapSo;
+    }
+</script>

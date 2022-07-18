@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập x cần tìm Giai thừa (!x): <br>
+    <label><input id="ip" type="number" style="width: 10%"></label></p>
+<p id="chuoi"></p>
+<p id="nb"></p>
+<button type="button" name="tính" onclick="Kiem_tra()">kiểm tra!</button>
+</body>
+</html>
+<script>
+    function Kiem_tra() {
+        let giaiThua = 1;
+        let chuoi = '';
+        let i = 1;
+        let number = document.getElementById('ip').value;
+        for (;i<= number; i++) {
+            giaiThua *=i;
+            chuoi += i + ".";
+        }
+        document.getElementById('chuoi').innerText = "Dãy Giai thừa của " + number + ' là: ' + chuoi;
+        document.getElementById("nb").innerText = "Giai thừa của số " + number + " là: " + giaiThua;
+    }
+</script>
